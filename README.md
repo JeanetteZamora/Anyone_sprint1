@@ -1,4 +1,5 @@
-# S1-NBAplayers-
+# Sprint1
+-NBAplayers-
 
 ## Objectives of the project
 
