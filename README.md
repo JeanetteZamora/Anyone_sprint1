@@ -9,6 +9,33 @@
 - Generating statistics about the data
 - Visualizing data
 
+## Install
+
+You can use `Docker` to easily install all the needed packages and libraries:
+
+```bash
+$ docker build -t s01_project .
+```
+
+### Run Docker 
+
+```bash
+$ docker run --rm --net host -it \
+    -v $(pwd):/home/app/src \
+    s01_project \
+    bash
+```
+
+## Run Project
+
+It doesn't matter if you are inside or outside a Docker container, in order to execute the project you need to launch a Jupyter notebook server running:
+
+```bash
+$ jupyter notebook
+```
+
+Then, inside the file `AnyoneAI_Project1.ipynb`, you can see the project statement, description and also which parts of the code you must complete in order to solve it.
+
 ## Creating my dataset
 
 I want to create a single pandas dataframe with information about all active players in the current NBA season. The dataset needs to have the following structure:
