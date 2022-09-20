@@ -22,6 +22,6 @@ ENV PATH=$PATH:/home/app/.local/bin
 # Install the python packages for this new user
 ADD requirements.txt .
 RUN pip3 install -r requirements.txt
-RUN pip install nba_api
+RUN pip3 install nba_api
 
 WORKDIR /home/app

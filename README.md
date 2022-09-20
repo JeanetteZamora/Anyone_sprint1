@@ -14,16 +14,13 @@
 You can use `Docker` to easily install all the needed packages and libraries:
 
 ```bash
-$ docker build -t s01_project .
+$ docker build -t sprint1 -f Dockerfile .
 ```
 
 ### Run Docker 
 
 ```bash
-$ docker run --rm --net host -it \
-    -v $(pwd):/home/app/src \
-    s01_project \
-    bash
+$ docker run --rm -it -p 8888:8888 -v $(pwd):/home/app/src sprint1 bash 
 ```
 
 ## Run Project
@@ -31,7 +28,7 @@ $ docker run --rm --net host -it \
 It doesn't matter if you are inside or outside a Docker container, in order to execute the project you need to launch a Jupyter notebook server running:
 
 ```bash
-$ jupyter notebook
+$ jupyter notebook --ip 0.0.0.0 --port 8888 --allow-root
 ```
 
 Then, inside the file `AnyoneAI_Project1.ipynb`, you can see the project statement, description and also which parts of the code you must complete in order to solve it.
